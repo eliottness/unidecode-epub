@@ -1,0 +1,43 @@
+[project]
+name = "unidecode-epub"
+version = "0.1.0"
+description = "CLI tool to convert Unicode text in EPUB files to ASCII for old Kindle devices"
+readme = "README.md"
+authors = [
+    { name = "copilot-swe-agent[bot]", email = "198982749+Copilot@users.noreply.github.com" }
+]
+requires-python = ">=3.8"
+dependencies = [
+    "ebooklib>=0.20",
+    "unidecode>=1.4.0",
+]
+license = { text = "GPL-2.0-or-later" }
+keywords = ["epub", "kindle", "mobi", "unidecode", "ascii", "ebook"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Text Processing",
+]
+
+[project.scripts]
+unidecode-epub = "unidecode_epub.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/eliottness/unidecode-epub"
+Repository = "https://github.com/eliottness/unidecode-epub"
+
+[build-system]
+requires = ["uv_build>=0.9.18,<0.10.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+]
